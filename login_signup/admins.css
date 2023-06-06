@@ -1,0 +1,55 @@
+
+
+
+.background{
+    background-image: linear-gradient(to right,#2193b0,#6dd5ed);
+    
+}
+
+
+
+.login-signup-form-height-width{
+    padding-top: 25px;
+    padding-bottom: 65px;
+}
+
+.card{
+    width: 50%;
+    margin: auto;
+    
+}
+
+.card img{
+    height: 300px;
+}
+
+.footer{
+    margin-top: 65px;
+}
+
+.footer-para {
+    background-color: #000;
+    color: white;
+    padding-bottom: 1px;
+    padding-top: 14px;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+    .card{
+        width: 90%;
+        margin: auto;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+    .card{
+        width: 100%;
+    }
+  }

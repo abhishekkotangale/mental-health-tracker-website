@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Courgette', cursive;
+    height: 100vh;
+}
+
+.navbar{
+    background-color: #000;
+}
+
+.company-name{
+    font-weight: 600;
+    color: white;
+}
+
+.brand-name{
+    font-size: 20px;
+    padding-left: 10px;
+    border-bottom: 4px solid #6ab04c;
+}
+
+.navbar-brand:hover{
+    color: green;
+}
+
+.logo{
+    padding-right: 6px;
+}
+
+.nav-link{
+    color: #fff;
+}
+
+.nav-link:hover{
+    color: rgb(93, 214, 93);
+    border-bottom: 2px solid #6ab04c;
+}
+
+
+
+.navbar-toggler{
+    border: none !important;
+    color: #fff;
+    box-sizing: none !important;
+}
+
+.navbar-toggler-icon{
+    background-color: white !important;
+    border: none !important;
+    box-sizing: none !important;
+}
+
+a{
+    color: #fff !important;
+}
+
+.footer{
+    margin-top: 65px;
+}
+
+.footer-para{
+    background-color: #000;
+    color: white;
+    padding-bottom: 1px;
+    padding-top: 14px;
+    font-size: 18px;
+}

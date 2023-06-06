@@ -1,0 +1,126 @@
+// variables
+@mixin bp($class) {
+	@if $class == mobile {
+		@media (min-width: 640px) {
+			@content;
+		}
+	} @else if $class == tablet {
+		@media (min-width: 768px) {
+			@content;
+		}
+	} @else if $class == laptop {
+		@media (min-width: 1024px) {
+			@content;
+		}
+	} @else if $class == desktop {
+		@media (min-width: 1280px) {
+			@content;
+		}
+	} @else if $class == cinema {
+		@media (min-width: 1536px) {
+			@content;
+		}
+	}
+}
+@mixin labotomized-owl {
+	* + * {
+		margin: 0.75em 0 0;
+	}
+}
+// Variables
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+$base-font-family: "Roboto Condensed", sans-serif;
+$g-line-height: 1.5 !default;
+$g-spacing: $g-line-height * 1em;
+$black: #000;
+$white: #fff;
+
+// global
+body,
+html {
+	min-height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1em;
+	line-height: 1.5;
+	background: #f4f4f4;
+	font-family: "roboto condensed", sans-serif;
+	font-weight: 300;
+	.wrapper {
+		width: 100%;
+		max-width: 1400px;
+		@include bp(laptop) {
+			padding: $g-spacing;
+		}
+	}
+	h2 {
+		font-weight: 300;
+		font-size: 200%;
+		line-height: 1.2;
+	}
+}
+.button {
+	position: relative;
+	display: table;
+	padding: $g-spacing / 2 $g-spacing * 2;
+	background: #000;
+	color: #fff;
+	text-decoration: none;
+	margin-top: $g-spacing;
+	text-transform: uppercase;
+	&:hover {
+		background: lighten(#222, 5%);
+	}
+}
+
+// Feature Block Offset
+.fb-offset {
+	padding: 0;
+	width: 100%;
+	.fb-offset-inner {
+		display: flex;
+		flex-direction: column;
+		@include bp(laptop) {
+			display: grid;
+			grid-template-columns: 600px auto;
+			grid-template-rows: auto;
+			align-content: end;
+			justify-items: end;
+		}
+		.content {
+			padding: 1em 1em 3em;
+			background: #fff;
+			@include bp(mobile) {
+				padding: 1em 11% 3em;
+				grid-column: 1;
+			}
+			@include bp(laptop) {
+				//margin-left: 20%;
+			}
+		}
+		.content,
+		.image {
+			grid-row: 1 / 2;
+			align-self: center;
+		}
+		.image {
+			grid-column: 1 / span 2;
+			background-image: url("https://cdn.shopify.com/s/files/1/0544/2243/8057/files/snow21_seamless_fit_journal_4-1024x576.jpg?v=1646994111");
+			background-size: cover;
+			background-position: center;
+			width: 100%;
+			width: 100%;
+			height: 350px;
+			@include bp(mobile) {
+				height: 500px;
+				background-position: right top;
+			}
+			@include bp(laptop) {
+				width: 80%;
+				height: 700px;
+			}
+		}
+	}
+}
